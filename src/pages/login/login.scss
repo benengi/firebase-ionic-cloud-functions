@@ -1,3 +1,15 @@
 page-login {
+  ion-content {
+    form {
+      ion-item { margin-top: 10px !important; }
 
+      button { margin-top: 20px !important; }
+    }
+
+    .login-button { margin-top: 5px !important; }
+
+    .invalid { border-bottom: 1px solid #FF6153; }
+
+    .error-message .item-inner { border-bottom: 0 !important; }
+  }
 }
