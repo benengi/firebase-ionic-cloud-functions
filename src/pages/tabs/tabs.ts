@@ -1,21 +1,19 @@
 import { Component } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
-import { TeamProvider } from '../../providers/team/team';
 
-@IonicPage()
+import { AboutPage } from '../about/about';
+import { ContactPage } from '../contact/contact';
+import { HomePage } from '../home/home';
+
 @Component({
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
-  tab1Root: string = 'HomePage';
-  tab2Root: string = 'TeamPage';
-  isAdmin: boolean = false;
 
-  constructor(public teamProvider: TeamProvider) {}
+  tab1Root = HomePage;
+  tab2Root = AboutPage;
+  tab3Root = ContactPage;
 
-  ionViewDidLoad() {
-    this.teamProvider.getAdminStatus().then(adminStatus => {
-      this.isAdmin = adminStatus;
-    });
+  constructor() {
+
   }
 }
